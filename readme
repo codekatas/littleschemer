@@ -1,0 +1,6 @@
+
+This repository contains all code from the book up till chapter 8. Due to time constraints & a bit of flu I have not completed the implementation yet. 
+
+In the near future I will complete & revise the specs, but for now they should be sufficient. 
+The specs are written using jasmine.js, a very nice bdd framework. 
+
