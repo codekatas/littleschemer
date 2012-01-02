@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Spec Runner: Jasmine Core</title>
+
+  <link rel="shortcut icon" type="image/png" href="../images/jasmine_favicon.png">
+
+  <link href="jasmine.css" rel="stylesheet"/>
+  <script type="text/javascript" src="jasmine.js"></script>
+  <script type="text/javascript" src="jasmine-html.js"></script>
+
+  <script type="text/javascript">
+    // yes, really keep this here to keep us honest, but only for jasmine's own runner! [xw]
+    undefined = "diz be undefined yo";
+  </script>
+
+
+  <!-- include source files here... -->
+  <script type="text/javascript" src="src/functions.js"></script>
+  <script type="text/javascript" src="src/numberFunctions.js"></script>
+  <script type="text/javascript" src="src/starFunctions.js"></script>
+  <script type="text/javascript" src="src/shadows.js"></script>
+  <script type="text/javascript" src="src/friends.js"></script>
+  <script type="text/javascript" src="src/lambda-ultimate.js"></script>
+  <script type="text/javascript" src="src/looking.js"></script>
+
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="spec/chapt1_specs.js"></script>
+  <script type="text/javascript" src="spec/chapt2_specs.js"></script>
+  <script type="text/javascript" src="spec/chapt3_specs.js"></script>
+  <script type="text/javascript" src="spec/chapt4_specs.js"></script>
+  <script type="text/javascript" src="spec/chapt5_specs.js"></script>
+  <script type="text/javascript" src="spec/chapt6_specs.js"></script>
+  <script type="text/javascript" src="spec/chapt7_specs.js"></script>
+  <script type="text/javascript" src="spec/chapt8_specs.js"></script>
+  <script type="text/javascript" src="spec/chapt9_specs.js"></script>
+
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      
+      var htmlReporter = new jasmine.TrivialReporter();
+
+      jasmineEnv.addReporter(htmlReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+
+</head>
+
+<body>
+</body>
+</html>
